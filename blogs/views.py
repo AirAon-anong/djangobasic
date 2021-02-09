@@ -6,7 +6,7 @@ from django.contrib import messages
 def hello(request):
     tags = ['น้ำตก','ธรรมชาติ','ลำธาร','หิมะ']
     rating = 4
-    return render(request,'index.html',
+    return render(request,'tweets/index.html',
     {
         'name':'บทความท่องเที่ยวภาคเหนือ',
         'author':'kong ruksium',
@@ -87,5 +87,7 @@ def logout(request):
     auth.logout(request)
     auth.logout(request)
     return redirect('/')
+
+
 
 
